@@ -3,18 +3,18 @@
 module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
-    var bin = 'node_modules/.bin';
+    var bin = 'node_modules\\.bin';
 
     grunt.initConfig({
         shell: {
             jshint: {
-                command: bin + '/jshint .'
+                command: bin + '\\jshint .'
             },
             mocha: {
-                command: bin + '/mocha --colors --reporter spec --recursive specs'
+                command: bin + '\\mocha --colors --reporter spec --recursive specs'
             },
             istanbul: {
-                command: bin + '/istanbul cover ' + bin + '/_mocha -- --reporter dot --recursive specs'
+                command: bin + '\\istanbul cover ' + bin + '\\_mocha -- --reporter dot --recursive specs'
             }
         }
     });
